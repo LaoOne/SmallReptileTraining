@@ -12,7 +12,7 @@ class HtmlOutput(object):
 
     def output_html(self):
         #file_name = time.strftime("%Y-%m-%d_%H:%M:%S")
-        with open("out_sssss.html" , "w") as f_out:
+        with open("out_sssss.html" , "w",encoding='utf-8') as f_out:
             f_out.write("<html>")
             f_out.write(r'<head>'
                         r'<link rel="stylesheet" '
@@ -28,7 +28,7 @@ class HtmlOutput(object):
                 f_out.write(r'<tr class="'+item_css[index]+r'">')
                 f_out.write('<td>%s</td>' % data["url"])
                 f_out.write('<td>%s</td>' % data["title"])
-                #f_out.write('<td>%s</td>' % data["summary"])
+                f_out.write('<td>%s</td>' % data["summary"])
                 f_out.write("</tr>")
 
             f_out.write("</table>")
